@@ -30,7 +30,7 @@ public class HairpinLoopCalculator {
 			} else {
 				deltaG2 = Constants.deltaGHairpinN(enclus);
 				if (l == 4) {
-					Constants.deltaGHairpin4(enclus);
+					deltaG3 = Constants.deltaGHairpin4(enclus);
 				}
 			}
 			
