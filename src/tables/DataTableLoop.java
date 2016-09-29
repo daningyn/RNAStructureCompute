@@ -39,12 +39,12 @@ class HairpinLoop {
 			hairpinLoop.add((float) 0);
 			hairpinLoop.add((float) 0);
 			hairpinLoop.add((float) 0);
-			hairpinLoop.add((float) 5.4);
-			hairpinLoop.add((float) 5.6);
 			hairpinLoop.add((float) 5.7);
+			hairpinLoop.add((float) 5.6);
+			hairpinLoop.add((float) 5.6);
 			hairpinLoop.add((float) 5.4);
-			hairpinLoop.add((float) 6.0);
-			hairpinLoop.add((float) 5.5);
+			hairpinLoop.add((float) 5.9);
+			hairpinLoop.add((float) 5.6);
 			hairpinLoop.add((float) 6.4);
 			hairpinLoop.add((float) 6.5);
 			hairpinLoop.add((float) 6.6);
@@ -84,10 +84,10 @@ class Internal {
 			internalLoop.add((float) 0);
 			internalLoop.add((float) 0);
 			internalLoop.add((float) 0);
-			internalLoop.add((float) 1.1);
+			internalLoop.add((float) 1.7);
+			internalLoop.add((float) 1.8);
 			internalLoop.add((float) 2.0);
-			internalLoop.add((float) 2.0);
-			internalLoop.add((float) 2.1);
+			internalLoop.add((float) 2.2);
 			internalLoop.add((float) 2.3);
 			internalLoop.add((float) 2.4);
 			internalLoop.add((float) 2.5);
@@ -95,7 +95,7 @@ class Internal {
 			internalLoop.add((float) 2.7);
 			internalLoop.add((float) 2.8);
 			internalLoop.add((float) 2.9);
-			internalLoop.add((float) 2.9);
+			internalLoop.add((float) 3.0);
 			internalLoop.add((float) 3.0);
 			internalLoop.add((float) 3.1);
 			internalLoop.add((float) 3.1);
@@ -104,12 +104,12 @@ class Internal {
 			internalLoop.add((float) 3.3);
 			internalLoop.add((float) 3.4);
 			internalLoop.add((float) 3.4);
-			internalLoop.add((float) 3.5);
+			internalLoop.add((float) 3.4);
 			internalLoop.add((float) 3.5);
 			internalLoop.add((float) 3.5);
 			internalLoop.add((float) 3.6);
 			internalLoop.add((float) 3.6);
-			internalLoop.add((float) 3.7);
+			internalLoop.add((float) 3.6);
 			internalLoop.add((float) 3.7);
 		}
 		return internalLoop;

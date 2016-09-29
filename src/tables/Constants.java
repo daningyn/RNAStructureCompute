@@ -88,7 +88,7 @@ public class Constants {
 	public static float deltaGInternal4(Character si, Character sj, Character si1, Character sj1, Character sip1, Character sjs1, Character si1s1, Character sj1p1) {
 		String temp = ""+si+"XX"+si1+sj1+"YY"+sj;
 		String X = ""+sip1+sjs1;
-		String Y = ""+si1s1+sj1+1;
+		String Y = ""+si1s1+sj1p1;
 		for (int i=0; i<Int22.getListTable().size(); i++) {
 			if (Int22.getListTable().get(i).getStr().equals(temp) == true) {
 				return Int22.getListTable().get(i).getData()[listEnclusString.indexOf(X)][listEnclusString.indexOf(Y)];

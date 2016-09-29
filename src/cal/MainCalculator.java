@@ -30,8 +30,8 @@ public class MainCalculator {
 		structure = scanner.nextLine();
 		System.out.print("Nhap Enclu: ");
 		enclu = scanner.nextLine();
-		structure = ".....(((((.........(((((.(((((..((((.(((..(((.................))).)))..)))).))))).(((.......))).....))))).(((((((....(((....)))(((((((....))))))).((((((....)))))).((....)).))))))).....)))))....((....))....................";
-		enclu = "ACAUGGGGAUAAGGGCAGGCGGUGAAUGCCUUGGCUCUCGGAGGCGAAGAAGGACGUGAUAAGCUGCGAUAAGCCCGGCGUAGGCGCAAAUAGCCGUUAAUACCGGGGUUUCCGAAUGGGGCAACCCGCCGGGAGUAAUUCCGGCAUCUCUUGAAAGAGGGAGGCGAACGUGGGGAACUGAAACAUCUCAGUACCUGCAGGAAAAAAAAAAAAAAAAAAAA";
+		structure = "..(((.((((...(((.((((((...(((....))).))))))..)))....))))...((((..(((..(((.....)))..))).)).))..)))....(((((.((....)).)).))).";
+		enclu =     "CCGGGGGGGCGAGGCACAGGGAUCUAGAGUGAACUCCAUCCCUCAUGCAGUAGCCCAGACUCCGCGGCAGGGCGAGAAGCCGAGCCAGGCAGGACCCAUACCGUAGACACACUUGGCUCGCGU";
 		enclu = enclu.toUpperCase();
 		for (int j=0; j<structure.length(); j++) {
 			struc.add(structure.charAt(j));
