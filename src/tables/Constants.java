@@ -122,32 +122,61 @@ public class Constants {
 		return Math.min(temp, AsymMax);
 	}
 	
-	public static float deltaGDangle(String enclus, int i, int j, int i1, int j1) {
+	public static float deltaGDangle(String enclus, int i, int j, int i1, int j1, String type) {
 		String temp1 = ""+enclus.charAt(i)+enclus.charAt(j)+'X';
 		String temp2 = ""+'X'+enclus.charAt(i1)+enclus.charAt(j1);
 		float s = 0;
-		if (i+1 < i1-1) {
-			for (int w=0; w<Dangle.getListTable().size(); w++) {
-				if (Dangle.getListTable().get(w).equals(temp1)) {
-					s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(j+1))];
-				} else if (Dangle.getListTable().get(w).equals(temp2)) {
-					s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(i1-1))];
+		
+		if (type.equals("First")) {
+			if (j < i1-1) {
+				for (int w=0; w<Dangle.getListTable().size(); w++) {
+					if (Dangle.getListTable().get(w).getStr().equals(temp1)) {
+						s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(j+1))];
+					} else if (Dangle.getListTable().get(w).getStr().equals(temp2)) {
+						s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(i1-1))];
+					}
 				}
-			}
-			return s;
-		} else if (i+1 == i1-1) {
-			float s1 = 0, s2 = 0;
-			for (int w=0; w<Dangle.getListTable().size(); w++) {
-				if (Dangle.getListTable().get(w).equals(temp1)) {
-					s1 = Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(j+1))];
-				} else if (Dangle.getListTable().get(w).equals(temp2)) {
-					s2 = Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(i1-1))];
+				return s;
+			} else if (j == i1-1) {
+				float s1=0, s2=0;
+				for (int w=0; w<Dangle.getListTable().size(); w++) {
+					if (Dangle.getListTable().get(w).getStr().equals(temp1)) {
+						s1 = Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(j+1))];
+					} else if (Dangle.getListTable().get(w).getStr().equals(temp2)) {
+						s2 = Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(i1-1))];
+					}
 				}
+				return Math.min(s1, s2);
+			} else {
+				return 0;
 			}
-			return Math.min(s1, s2);
+		} else if (type.equals("Normal")) {
+			if (i+1 < i1-1) {
+				for (int w=0; w<Dangle.getListTable().size(); w++) {
+					if (Dangle.getListTable().get(w).getStr().equals(temp1)) {
+						s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(j+1))];
+					} else if (Dangle.getListTable().get(w).getStr().equals(temp2)) {
+						s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(i1-1))];
+					}
+				}
+				return s;
+			} else if (i+1 == i1-1) {
+				float s1 = 0, s2 = 0;
+				for (int w=0; w<Dangle.getListTable().size(); w++) {
+					if (Dangle.getListTable().get(w).getStr().equals(temp1)) {
+						s1 = Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(j+1))];
+					} else if (Dangle.getListTable().get(w).getStr().equals(temp2)) {
+						s2 = Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(i1-1))];
+					}
+				}
+				return Math.min(s1, s2);
+			} else {
+				return 0;
+			}
 		} else {
-			return 0;
+			return -9999;
 		}
+		
 		
 	}
 	

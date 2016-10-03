@@ -35,13 +35,13 @@ public class MultibrandchedCalculator {
 			temp1 = temp1 + Constants.nonGCterminal(enclus.charAt(arrayI.get(i)), enclus.charAt(arrayJ.get(i)));
 		}
 		deltaG = deltaG + temp1;
-		deltaG = deltaG + Constants.deltaGDangle(enclus, arrayJ.get(0), arrayI.get(0), arrayI.get(1), arrayJ.get(1));
+		deltaG = deltaG + Constants.deltaGDangle(enclus, arrayJ.get(0), arrayI.get(0), arrayI.get(1), arrayJ.get(1), "First");
 		temp1 = 0;
 		for (int i=1; i<arrayI.size()-1; i++) {
-			temp1 = temp1 + Constants.deltaGDangle(enclus, arrayI.get(i), arrayJ.get(i), arrayI.get(i+1), arrayJ.get(i+1));
+			temp1 = temp1 + Constants.deltaGDangle(enclus, arrayI.get(i), arrayJ.get(i), arrayI.get(i+1), arrayJ.get(i+1), "Normal");
 		}
 		deltaG = deltaG + temp1;
-		deltaG = deltaG + Constants.deltaGDangle(enclus, arrayI.get(arrayI.size()-1), arrayJ.get(arrayJ.size()-1), arrayJ.get(0), arrayI.get(0));
+		deltaG = deltaG + Constants.deltaGDangle(enclus, arrayI.get(arrayI.size()-1), arrayJ.get(arrayJ.size()-1), arrayJ.get(0), arrayI.get(0), "Normal");
 		
 		return deltaG;
 	}
