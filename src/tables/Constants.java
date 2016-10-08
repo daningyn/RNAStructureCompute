@@ -122,6 +122,34 @@ public class Constants {
 		return Math.min(temp, AsymMax);
 	}
 	
+	public static float deltaGDangle5p(Character i, Character j, Character is1) {
+		String temp = ""+'X'+i+j;
+		float s = 0;
+		
+		for (int w=0; w<Dangle.getListTable().size(); w++) {
+			if (Dangle.getListTable().get(w).getStr().equals(temp)) {
+				s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(is1)];
+				break;
+			}
+		}
+		return s;
+		
+	}
+	
+	public static float deltaGDangle3p(Character i, Character j, Character jp1) {
+		String temp = ""+i+j+'X';
+		float s = 0;
+		
+		for (int w=0; w<Dangle.getListTable().size(); w++) {
+			if (Dangle.getListTable().get(w).getStr().equals(temp)) {
+				s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(jp1)];
+				break;
+			}
+		}
+		
+		return s;
+	}
+	
 	public static float deltaGDangle(String enclus, int i, int j, int i1, int j1, String type) {
 		String temp1 = ""+enclus.charAt(i)+enclus.charAt(j)+'X';
 		String temp2 = ""+'X'+enclus.charAt(i1)+enclus.charAt(j1);

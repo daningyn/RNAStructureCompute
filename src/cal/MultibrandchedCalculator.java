@@ -24,7 +24,9 @@ public class MultibrandchedCalculator {
 		int temp = 0;
 		
 		deltaG = deltaG + Constants.Multia;
+		System.out.println("DeltaG after + Multia: "+deltaG);
 		deltaG = deltaG + Constants.Multib * (arrayI.size());
+		System.out.println("DeltaG after + Multib: "+deltaG);
 		for (int i=1; i<arrayI.size()-1; i++) {
 			temp = temp + arrayI.get(i+1) - arrayI.get(i) - 1;
 		}
@@ -35,13 +37,17 @@ public class MultibrandchedCalculator {
 			temp1 = temp1 + Constants.nonGCterminal(enclus.charAt(arrayI.get(i)), enclus.charAt(arrayJ.get(i)));
 		}
 		deltaG = deltaG + temp1;
+		System.out.println("DeltaG after + nonGCterminal: "+deltaG);
 		deltaG = deltaG + Constants.deltaGDangle(enclus, arrayJ.get(0), arrayI.get(0), arrayI.get(1), arrayJ.get(1), "First");
+		System.out.println("DeltaG after + Dangle First: "+deltaG);
 		temp1 = 0;
 		for (int i=1; i<arrayI.size()-1; i++) {
 			temp1 = temp1 + Constants.deltaGDangle(enclus, arrayI.get(i), arrayJ.get(i), arrayI.get(i+1), arrayJ.get(i+1), "Normal");
 		}
 		deltaG = deltaG + temp1;
+		System.out.println("DeltaG after + Xixh Ma Dangle: "+deltaG);
 		deltaG = deltaG + Constants.deltaGDangle(enclus, arrayI.get(arrayI.size()-1), arrayJ.get(arrayJ.size()-1), arrayJ.get(0), arrayI.get(0), "Normal");
+		System.out.println("DeltaG after + Last Dangle: "+deltaG);
 		
 		return deltaG;
 	}

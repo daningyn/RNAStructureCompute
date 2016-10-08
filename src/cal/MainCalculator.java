@@ -26,12 +26,12 @@ public class MainCalculator {
 	public static void main(String[] args) {
 		
 		scanner = new Scanner(System.in);
-		System.out.print("Nhap String: ");
-		structure = scanner.nextLine();
-		System.out.print("Nhap Enclu: ");
-		enclu = scanner.nextLine();
-		structure = "..(((.((((...(((.((((((...(((....))).))))))..)))....))))...((((..(((..(((.....)))..))).)).))..)))....(((((.((....)).)).))).";
-		enclu =     "CCGGGGGGGCGAGGCACAGGGAUCUAGAGUGAACUCCAUCCCUCAUGCAGUAGCCCAGACUCCGCGGCAGGGCGAGAAGCCGAGCCAGGCAGGACCCAUACCGUAGACACACUUGGCUCGCGU";
+//		System.out.print("Nhap String: ");
+//		structure = scanner.nextLine();
+//		System.out.print("Nhap Enclu: ");
+//		enclu = scanner.nextLine();
+		structure = ".((((((((((((....))))....))))))))((((((....))))))...";
+		enclu =     "cgauugcaugucgaugucgaugcugaugcaguugcaugcguaugcaugcgua";
 		enclu = enclu.toUpperCase();
 		for (int j=0; j<structure.length(); j++) {
 			struc.add(structure.charAt(j));
@@ -99,8 +99,25 @@ public class MainCalculator {
 			i++;
 		}
 		
+		System.out.println("Struc: "+getStringRepresentation(struc));
+		System.out.println("Enclu: "+getStringRepresentation(strucEnclu));
+		float temp = MultiDomainCalculator.shareInstance().computeDeltaG(getStringRepresentation(struc), getStringRepresentation(strucEnclu));
+		System.out.println("Multi Domain: ----> "+temp);
+		results += temp;
+		
+		
 		System.out.println("Result = "+results);
 		
+	}
+	
+	static String getStringRepresentation(List<Character> struc2)
+	{    
+	    StringBuilder builder = new StringBuilder(struc2.size());
+	    for(Character ch: struc2)
+	    {
+	        builder.append(ch);
+	    }
+	    return builder.toString();
 	}
 	
 }
