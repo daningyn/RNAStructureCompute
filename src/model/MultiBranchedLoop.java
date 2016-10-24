@@ -36,7 +36,7 @@ public class MultiBranchedLoop {
 		
 		for (int w=i+1; w<j; w++) {
 			if (structure.charAt(w) == '(') {
-				if (structure.charAt(w-1) != '.') return false;
+//				if (structure.charAt(w-1) != '.') return false;
 				if (structure.charAt(w+1) != ')') return false;
 			} else {
 				
