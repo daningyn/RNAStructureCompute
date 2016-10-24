@@ -58,12 +58,11 @@ public class Int22 {
 				int countListString = 0;
 				int count = 0;
 				while (line != null) {
-					
 					Int22 table = new Int22();
 					table.str = listStr.get(countListString);
-					String[] parts = line.split(" ");
 					
 					for (int i=0; i<listEnclu.size(); i++) {
+						String[] parts = line.split(" ");
 						for (int j=0; j<listEnclu.size(); j++) {
 							if (i == 0 || j == 0) table.data[i][j] = 0;
 							else {

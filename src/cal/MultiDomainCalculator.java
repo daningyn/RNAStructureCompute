@@ -43,7 +43,7 @@ public class MultiDomainCalculator {
 	
 	private List<Integer> getI(String structure) {
 		List<Integer> arr = new ArrayList<Integer>();
-		for (int i=2; i<structure.length(); i++) {
+		for (int i=1; i<structure.length(); i++) {
 			if (structure.charAt(i) == '(') {
 				arr.add(i);
 			}
@@ -54,7 +54,7 @@ public class MultiDomainCalculator {
 	
 	private List<Integer> getJ(String structure) {
 		List<Integer> arr = new ArrayList<Integer>();
-		for (int i=3; i<structure.length()-1; i++) {
+		for (int i=2; i<structure.length()-1; i++) {
 			if (structure.charAt(i) == ')') {
 				arr.add(i);
 			}
