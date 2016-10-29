@@ -30,9 +30,21 @@ public class MainCalculator {
 //		structure = scanner.nextLine();
 //		System.out.print("Nhap Enclu: ");
 //		enclu = scanner.nextLine();
-		structure = ".((((((((((((....))))....))))))))((((((....))))))...";
-		enclu =     "cgauugcaugucgaugucgaugcugaugcaguugcaugcguaugcaugcgua";
+//-44.7		structure = ".(((((((((...(((.((((((...(((....))).))))))..)))....))))...)))))..((..(((.....)))((((((((..((.......)).........))))))))))..";
+//-44.9		structure = ".(((((((((...(((.((((((...(((....))).))))))..)))....))))...)))))..((..(.((((..(((......))).((.......)).........)))).)..))..";
+//-43.4		structure = "(((((.((((...(((.((((((...(((....))).))))))..)))....))))....((..(((..(((......(((......)))....)))...)))..))....))))).......";
+		structure = "..(((.((((...(((.((((((...(((....))).))))))..)))....))))...((((..(((..(((.....)))..))).)).))..)))....(((((.((....)).)).))).";
+		enclu  =    "CCGGGGGGGCGAGGCACAGGGAUCUAGAGUGAACUCCAUCCCUCAUGCAGUAGCCCAGACUCCGCGGCAGGGCGAGAAGCCGAGCCAGGCAGGACCCAUACCGUAGACACACUUGGCUCGCGU";
+		
+		
+		
+//		enclu =     "ACAUGGGGAUAAGGGCAGGCGGUGAAUGCCUUGGCUCUCGGAGGCGAAGAAGGACGUGAUAAGCUGCGAUAAGCCCGGCGUAGGCGCAAAUAGCCGUUAAUACCGGGGUUUCCGAAUGGGGCAACCCGCCGGGAGUAAUUCCGGCAUCUCUUGAAAGAGGGAGGCGAACGUGGGGAACUGAAACAUCUCAGUACCUGCAGGAAAAAAAAAAAAAAAAAAAA";
+//-72.1		structure = "...(((...(((.(((..(((.(..(((((..((((.(((..(((.................))).)))..)))).)))))..)))).....))).)))...)))...(((((....(((....)))(((((((....))))))).((((((....)))))).......(..((..(((((......))))).))..).))))).................";
+//-73.4		structure = "....(((....((((((.........)))))).((((((((((((.........(((........))).....(((((....(((.......))).......)))))))))))))...))))..)))(((((((....))))))).((((((....)))))).......(..((..(((((......))))).))..).......................";
+//-73.6		structure = "...........((((((((((.....)))))..)))))(((((((.........(((........))).....(((((....(((.......))).......))))))))))))...(((....)))(((((((....))))))).((((((....)))))).......(..((..(((((......))))).))..).......................";
+//-70.4		structure = "..............((((((((((.(((((..((((.(((..(((.................))).)))..)))).))))).(((.......))).....))))).(((((((....(((....)))(((((((....))))))).((((((....))))))..........)))))))..............))))).......................";
 		enclu = enclu.toUpperCase();
+		System.out.println(structure.length());
 		for (int j=0; j<structure.length(); j++) {
 			struc.add(structure.charAt(j));
 			strucEnclu.add(enclu.charAt(j));
@@ -104,7 +116,7 @@ public class MainCalculator {
 		float temp = MultiDomainCalculator.shareInstance().computeDeltaG(getStringRepresentation(struc), getStringRepresentation(strucEnclu));
 		System.out.println("Multi Domain: ----> "+temp);
 		results += temp;
-		
+		results = (float)Math.round(results*10)/10;
 		
 		System.out.println("Result = "+results);
 		

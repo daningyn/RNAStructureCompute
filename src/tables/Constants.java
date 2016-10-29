@@ -156,7 +156,7 @@ public class Constants {
 		float s = 0;
 		
 		if (type.equals("First")) {
-			if (j < i1-1) {
+			if (j+1 < i1-1) {
 				for (int w=0; w<Dangle.getListTable().size(); w++) {
 					if (Dangle.getListTable().get(w).getStr().equals(temp1)) {
 						s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(j+1))];
@@ -165,7 +165,7 @@ public class Constants {
 					}
 				}
 				return s;
-			} else if (j == i1-1) {
+			} else if (j+1 == i1-1) {
 				float s1=0, s2=0;
 				for (int w=0; w<Dangle.getListTable().size(); w++) {
 					if (Dangle.getListTable().get(w).getStr().equals(temp1)) {
@@ -179,7 +179,7 @@ public class Constants {
 				return 0;
 			}
 		} else if (type.equals("Normal")) {
-			if (i+1 < i1-1) {
+			if (i+2 < i1-1) {
 				for (int w=0; w<Dangle.getListTable().size(); w++) {
 					if (Dangle.getListTable().get(w).getStr().equals(temp1)) {
 						s += Dangle.getListTable().get(w).getData()[listEnclus.indexOf(enclus.charAt(j+1))];
@@ -188,7 +188,7 @@ public class Constants {
 					}
 				}
 				return s;
-			} else if (i+1 == i1-1) {
+			} else if (i+2 == i1-1) {
 				float s1 = 0, s2 = 0;
 				for (int w=0; w<Dangle.getListTable().size(); w++) {
 					if (Dangle.getListTable().get(w).getStr().equals(temp1)) {
